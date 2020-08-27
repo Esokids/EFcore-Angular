@@ -1,0 +1,29 @@
+<h1 style="margin-top: 2em">Products</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ProductName</th>
+      <th>Stock</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td scope="row">{{ product.name }}</td>
+      <td>{{ getSumSellOut(product.detail) }} | {{ product.stock }}</td>
+      <td>
+        <a
+          *ngIf="product.detail.length > 0"
+          name=""
+          id=""
+          class="btn btn-primary"
+          routerLink="/products/{{ product.id }}"
+          role="button"
+        >
+          Action
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

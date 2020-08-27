@@ -1,0 +1,48 @@
+<h1 style="margin-top: 2em; align-content: center">Product</h1>
+<h3 style="margin-top: 1em">{{ product.name }}</h3>
+
+<div
+  style="margin: 1em; border-style: solid; padding: 2em"
+  *ngFor="let detail of product.detail"
+>
+  <form>
+    <div class="form-group">
+      <label for="SellOut">sellOut</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Sell Out"
+        value="{{ detail.sellOut }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="SellOut">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Name"
+        value="{{ detail.name }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="SellOut">Tel</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Tel"
+        value="{{ detail.tel }}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="SellOut">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Sell Out"
+        value="{{ detail.email }}"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
